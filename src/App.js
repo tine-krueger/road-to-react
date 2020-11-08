@@ -5,7 +5,7 @@ function getTitle(title) {
 }
 
 
-const list = [
+const list1 = [
   {
     title: 'React',
     url: 'http://reactjs.org',
@@ -16,6 +16,44 @@ const list = [
   },
   {
     title: 'Redux',
+    url: 'http://redux.js.org',
+    author: 'Dan Abramov, Andrew Clark',
+    num_comments: 2,
+    points: 5,
+    objectID: 1
+  }
+]
+
+const list2 = [
+  {
+    title: 'Fuckin other language',
+    url: 'http://reactjs.org',
+    author: 'Jordan Walke',
+    num_comments: 3,
+    points: 4,
+    objectID: 0
+  },
+  {
+    title: 'Express',
+    url: 'http://redux.js.org',
+    author: 'Dan Abramov, Andrew Clark',
+    num_comments: 2,
+    points: 5,
+    objectID: 1
+  }
+]
+
+const list3 = [
+  {
+    title: 'Wordpress',
+    url: 'http://reactjs.org',
+    author: 'Jordan Walke',
+    num_comments: 3,
+    points: 4,
+    objectID: 0
+  },
+  {
+    title: 'Angular',
     url: 'http://redux.js.org',
     author: 'Dan Abramov, Andrew Clark',
     num_comments: 2,
@@ -36,11 +74,11 @@ function App() {
       <label htmlFor="search"> Search: </label>
       <input id="search" type="text"/>
       <hr />
-      <List/>
+      <List list={list1}/>
       <hr />
-      <List/>
+      <List list={list2}/>
       <hr />
-      <List />
+      <List list={list3}/>
       
     </div>
   );
@@ -48,7 +86,7 @@ function App() {
 
 export default App;
 
-function List() {
+function List({list}) {
   return list.map(function(item) {
     return (<div key={item.objectID}>
       <span>

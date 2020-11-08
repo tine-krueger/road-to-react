@@ -1,10 +1,5 @@
 import './App.css'
 
-function getTitle(title) {
-  return title
-}
-
-
 const list1 = [
   {
     title: 'React',
@@ -86,9 +81,9 @@ function App() {
 
 export default App;
 
-function List({list}) {
-  return list.map(function(item) {
-    return (<div key={item.objectID}>
+const List = ({list}) => {
+  return list.map(item => 
+     (<div key={item.objectID}>
       <span>
         <a href={item.url}>{item.title}</a>
       </span>
@@ -97,5 +92,5 @@ function List({list}) {
       <span>{item.points}</span>
       </div>
     )
-  })
+     })
 }

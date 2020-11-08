@@ -37,6 +37,10 @@ function App() {
       <input id="search" type="text"/>
       <hr />
       <List/>
+      <hr />
+      <List/>
+      <hr />
+      <List />
       
     </div>
   );
